@@ -1,3 +1,0 @@
-Se deben añadir al proyecto las librerias:
-	->mysql-connector-java-8.0.28 que se encuentra dentro de la carpeta conectores
-	->MySQL JDBC Driver-mysql-connector-java-5.1.23, este se añade desde netbeans
