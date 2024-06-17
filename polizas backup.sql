@@ -15,6 +15,13 @@
 /*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
 /*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
 
+
+-- Database polizas 
+
+DROP DATABASE IF EXISTS `polizas`;
+CREATE DATABASE `polizas`;
+USE `polizas`;
+
 --
 -- Table structure for table `cobertura`
 --
@@ -122,7 +129,7 @@ DROP TABLE IF EXISTS `modelo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `modelo` (
-  `idmodelo` int(11) NOT NULL,
+  `idmodelo` int(11) unique NOT NULL,
   `nombre_modelo` varchar(50) NOT NULL,
   `marca_idmarca` int(11) NOT NULL,
   PRIMARY KEY (`idmodelo`,`marca_idmarca`),
@@ -476,7 +483,7 @@ DROP TABLE IF EXISTS `vehiculo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
 /*!40101 SET character_set_client = utf8 */;
 CREATE TABLE `vehiculo` (
-  `idvehiculo_placa` varchar(40) NOT NULL,
+  `idvehiculo_placa` varchar(40) unique NOT NULL,
   `tipo_vehiculo_idtipo_vehiculo` int(11) NOT NULL,
   `año` int(11) NOT NULL,
   `modelo_idmodelo` int(11) NOT NULL,
@@ -487,6 +494,7 @@ CREATE TABLE `vehiculo` (
   CONSTRAINT `fk_vehiculo_tipo_vehiculo1` FOREIGN KEY (`tipo_vehiculo_idtipo_vehiculo`) REFERENCES `tipo_vehiculo` (`idtipo_vehiculo`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb3;
 /*!40101 SET character_set_client = @saved_cs_client */;
+
 
 --
 -- Dumping data for table `vehiculo`
