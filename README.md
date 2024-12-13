@@ -33,7 +33,7 @@ java -jar nombreProyecto.jar
 
 ## Desarrollador👨‍💻
 
-* Brayan Alejandro Riveros Rodriguez - 20201020084
+* Brayan Alejandro Riveros Rodriguez
     - [@Brayan-22](https://github.com/Brayan-22)
   
 ##### Estudiante de ingenieria de sistemas de la Universidad Distrital Francisco José de Caldas.
